@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./storage:/app/storage  # Maps local storage folder to container storage
+    environment:
+      - PYTHONUNBUFFERED=1
